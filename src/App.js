@@ -8,8 +8,8 @@ import {
 import { Link } from "react-router-dom";
 import { Container, Form, Button } from "semantic-ui-react";
 import './App.css';
-import { Footer } from "./components/footer/footer";
-import Header from "./components/header/header";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
 
@@ -28,8 +28,8 @@ function App() {
     }
   });
   return (
-
-         <Container>
+    <div>
+        <Container>
           <Form onSubmit={formik.handleSubmit}>
             <Form.Input type='text' placeholder='nombre' name='name' onChange={formik.handleChange} error={formik.errors.name}/>
             <Button type='submit'>Registro</Button>
@@ -38,26 +38,25 @@ function App() {
 
 
     </Container>  
+    <Router>
+
+      <Link to="/titulo"><h1>Dirección</h1></Link>
+        <Switch>
+          <Route path="/titulo">
+            <Footer />
+          </Route>
+          <Route path="/">
+            <Header />
+          </Route>
+        </Switch>
+
+    </Router>
+
+
+    </div>
+
     
   );
 }
 
 export default App;
-    // <div>
-
-// {/* <Router>
-
-//       <Link to="/titulo"><h1>Dirección</h1></Link>
-//         <Switch>
-//           <Route path="/titulo">
-//             <Footer />
-//           </Route>
-//           <Route path="/">
-//             <Header />
-//           </Route>
-//         </Switch>
-
-//     </Router>
-
-
-//     </div> */}

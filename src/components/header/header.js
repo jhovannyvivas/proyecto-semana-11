@@ -1,7 +1,15 @@
+// import { Link } from 'react-router-dom'
+import EnlacesHeader from '../EnlacesHeader/EnlacesHeader'
+import './Header.css'
 
-import { Link } from 'react-router-dom';
+export default function Header() {
+    return(
+        <header className='header'>
+            {/* <Link to='/'><Logo></Logo></Link> */}
+            <EnlacesHeader/>
+            
+        </header>
 
-export default function Header () {
-    return <Link to="/titulo"><div><h1>Pastas</h1></div></Link>;
-    
+    )
 }
+
