@@ -1,40 +1,32 @@
 import { Container, Form, Button } from 'semantic-ui-react';
 import './login.css';
 import { useFormik } from 'formik';
+import * as Yup from 'yup';
 
 export default function Login () {
-       const formik = {
-           initialValues: {
-               name: ""
-           },
-           onSubmit: (formData) => {
-                console.log(formData);
-           }
-       }
-    
-    let login = (
+   const llave = '/';
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+    },
+    validationSchema: Yup.object({
+      name: Yup.string().required(),
+    }),
+    onSubmit: (formData) => {
+      // llave = '/header';
+      console.log(formData);
+    }
+  });
 
-        // <Container>
-        // <p>Nombre</p>
-        // <Form>
-        //     <Form.input type='text' placeholder='Nombre y apellidos' name='name'/>  
-         
-        //  </Form>
+    return (
+         <Container>
+          <Form onSubmit={formik.handleSubmit}>
+            <Form.Input type='text' placeholder='nombre' name='name' onChange={formik.handleChange} error={formik.errors.name}/>
+            <Button type='submit'>Registro</Button>
+          </Form>
+        </Container>
 
-        // </Container>
-
-        <section>
-            
-            <label>Nombre</label>
-            <input type='text'></input>
-            <button>ok</button>
-        </section>
-         
-
-       )
-       ;
-    console.log(login);
-    return login;
+    ) ;
 
 }
 
