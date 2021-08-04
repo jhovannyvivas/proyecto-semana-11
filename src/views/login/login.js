@@ -10,9 +10,11 @@ export default function Login () {
   const formik = useFormik({
     initialValues: {
       name: "",
+      password: ''
     },
     validationSchema: Yup.object({
-      name: Yup.string().email().required("email requerido"),
+      email: Yup.string().email().required("Please email"),
+      password: Yup.string().required("Please password"),
     }),
     onSubmit: (formData) => {
       console.log(formData);
@@ -25,23 +27,28 @@ export default function Login () {
 
   function Button2 () {
       let button = "";
-    if(formik.values.name === '' || formik.errors.name === "name must be a valid email" || formik.errors.name === "email requerido"){
+    if(formik.values.email === '' || formik.errors.email === "name must be a valid email" || formik.errors.email === "Please email" || formik.values.password === '' || formik.errors.password === "Please password"){
         button = <Button type='submit'>Login</Button> 
     }  else {
-        button =<Link to='/header'><Button type='submit'>boton con link</Button><h1>Valido</h1></Link>
+        button =<Link to='/homepage'><Button type='submit'>Login</Button></Link>
     };
     
     return button
   }
 
     return (
-         <Container>
+      <div className='divContainer'>
+         <Container >
           <Form onSubmit={formik.handleSubmit}>
-            <Form.Input type='email' placeholder='nombre' name='name' onChange={formik.handleChange} error={formik.errors.name}/>
+            <Form.Input type='email' placeholder='Email' name='email' onChange={formik.handleChange} error={formik.errors.email}/>
+            <Form.Input type='password' placeholder='Password' name='password' onChange={formik.handleChange} error={formik.errors.password}/>
             {Button2()}
           </Form>
 
         </Container>
+
+
+      </div>
 
     ) ;
 

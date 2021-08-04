@@ -1,0 +1,7 @@
+.grillaHome {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}

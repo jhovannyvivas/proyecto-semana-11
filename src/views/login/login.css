@@ -1,0 +1,35 @@
+.divContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50vw;
+    height: 40vw;
+    padding: 100px 100px;
+    background-color: rgb(98, 16, 16);
+    margin:auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 50px;
+}
+
+.button {
+    width: 50vw;
+    height: 40px;
+    padding: auto;
+}

@@ -13,44 +13,28 @@ import Header from "./components/Header/Header";
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
 import Login from "./views/login/login";
+import Homepage from "./views/homepage/homepage";
+import { GetMeals } from './utils/getMeals';
+import { GetMeal } from "./utils/getMeal";
 
 function App() {
-  //  const llave = '/';
-  // const formik = useFormik({
-  //   initialValues: {
-  //     name: "",
-  //   },
-  //   validationSchema: Yup.object({
-  //     name: Yup.string().required(),
-  //   }),
-  //   onSubmit: (formData) => {
-  //     // llave = '/header';
-  //     console.log(formData);
-  //   }
-  // });
+  const array = GetMeals();
+  const array2= GetMeal();
+
   return (
     <div>
-        {/* <Container>
-          <Form onSubmit={formik.handleSubmit}>
-            <Form.Input type='text' placeholder='nombre' name='name' onChange={formik.handleChange} error={formik.errors.name}/>
-            <Button type='submit'>Registro</Button>
-          </Form>
-        
 
-
-    </Container>   */}
     <Router>
-
-      <Link to="/titulo"><h1>Dirección</h1></Link>
+       <Header/> 
         <Switch>
-          <Route path="/header">
-            <Footer />
+          <Route path="/homepage">
+            <Homepage/>
           </Route>
           <Route path="/">
             <Login/>
           </Route>
         </Switch>
-
+        <Footer />
     </Router>
 
 
