@@ -1,0 +1,79 @@
+.main-input {
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+.main-input-container {
+    width: 525 px;
+    border-radius: 100px;
+    border: 1px solid #dfe1e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.main-input input{
+    width: 450px;
+    height: 40px;
+    border: none;
+    outline: none;
+
+}
+
+.main-input-container:hover {
+    box-shadow: 0 1px 6px 0 #20212447;
+    border-color: #dfe1e500;
+}
+
+.main-input .search-icon{
+    background-image: url('http://assets.stickpng.com/thumbs/585e4ae1cb11b227491c3393.png');
+    background-repeat: none;
+    background-position: center;
+    background-size: contain;
+    width: 17px;
+    height: 18px;
+
+}
+
+.main-input .micro-icon{
+background-image: url('https://e7.pngegg.com/pngimages/984/50/png-clipart-pokxe9mon-go-pokxe9mon-battle-revolution-ico-icon-red-sprites-eggs-text-pet.png');
+    background-repeat: none;
+    background-position: center;
+    background-size: contain;
+    width: 16px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.main-buttons {
+    display: flex;
+    width: 530px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.main-buttons div {
+    display: inline-block;
+    padding: auto;
+}
+
+.main-buttons button {
+    height: 36px;
+    background-color: #f2f2f2;
+    border: 0;
+    font-size: 14px;
+    color: #5f6368;
+    padding: 0 30px;
+    border-radius: 15px;
+
+
+
+}
+
+.main-buttons button:hover {
+    border: 1px solid #dadce0;
+    box-shadow: 0 1 px rgb(0 0 0 / 10%);
+    color: #000000;
+}

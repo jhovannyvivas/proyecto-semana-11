@@ -1,6 +1,7 @@
 import { GetMeal } from '../../utils/getMeal';
 import './MealDetail.css';
 import getID from './../../utils/getID';
+import { string } from 'yup';
 
 
 
@@ -8,8 +9,13 @@ export default function MealDetail() {
     let broswer = window;
     let id = getID(broswer);
     const mealDescription = GetMeal(id);
-    return(
-        <section className='mealDetail'>
+    function Path () {
+        let path = new string;
+        if (id === 10) {
+            path = <div><h1>letra a</h1></div>
+        } else {
+            path =  
+            <section className='mealDetail'>
             <div className='containerImg'><img src={mealDescription[0]?.strMealThumb} alt='meal'></img><h1>{mealDescription[0]?.strMeal}</h1></div>
             <div className='description'>
                 <div className='item'><h3>Bebida acompañante</h3></div>
@@ -104,6 +110,12 @@ export default function MealDetail() {
                 <div className='text'><p>{mealDescription[0]?.strMeasure20}</p></div>
             </div>
         </section>
+        }
+        
+        return path;
+    }
+    return(<section><Path/></section>
+        
     )
 }
 

@@ -20,5 +20,7 @@ export const GetMeals = () => {
       }
   }, []);
   console.log(mealsA);
+
+
   return mealsA;
 }
