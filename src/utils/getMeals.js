@@ -6,10 +6,18 @@ export const GetMeals = () => {
   const [mealsA, setMeals] = useState([]);
 
   useEffect(() => {
-    fetch(API).then((response) => response.json())
+
+    const abortController = new AbortController();
+    const signal = abortController.signal;
+
+    fetch(API, {signal: signal}).then((response) => response.json())
       .then((data1) => {
         setMeals(data1.meals);
       });
+
+      return function cleanup() {
+          abortController.abort();
+      }
   }, []);
   console.log(mealsA);
   return mealsA;

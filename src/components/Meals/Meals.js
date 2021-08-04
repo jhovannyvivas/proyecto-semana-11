@@ -1,12 +1,13 @@
 import './Meals.css';
-import { GetData } from '../../utils/getMeals';
+import { GetData, GetMeals } from '../../utils/getMeals';
 import Card from '../Meal/Meal';
+import Meal from './../Meal/Meal';
 
 export default function Meals(){
-    let meals = GetData();
+    let meals = GetMeals();
     return(
         <section className='grillaHome'>
-            {meals.map((meal) => <Card key={meal.idMeal} pId={meal.idMeal}/> )}
+            {meals.map((meal) => <Meal key={meal.idMeal} pId={meal}/> )}
         </section>
     )
 }

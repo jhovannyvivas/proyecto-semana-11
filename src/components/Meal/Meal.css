@@ -10,6 +10,7 @@
 .card img {
     border-radius: 15px;
     opacity: 0.3;
+    width: 50vh;
 }
 
 .card:hover img:hover {

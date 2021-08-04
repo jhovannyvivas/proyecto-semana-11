@@ -16,17 +16,20 @@ import Login from "./views/login/login";
 import Homepage from "./views/homepage/homepage";
 import { GetMeals } from './utils/getMeals';
 import { GetMeal } from "./utils/getMeal";
+import MealDetail from './views/meal/mealDetail';
 
 function App() {
-  const array = GetMeals();
-  const array2= GetMeal();
+
 
   return (
-    <div>
+  
 
     <Router>
        <Header/> 
         <Switch>
+          <Route path="/mealDetail/:id">
+            <MealDetail/>
+          </Route>
           <Route path="/homepage">
             <Homepage/>
           </Route>
@@ -38,7 +41,6 @@ function App() {
     </Router>
 
 
-    </div>
 
     
   );
