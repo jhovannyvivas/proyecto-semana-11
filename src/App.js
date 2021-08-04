@@ -43,7 +43,7 @@ function App() {
 
       <Link to="/titulo"><h1>Dirección</h1></Link>
         <Switch>
-          <Route path="/titulo">
+          <Route path="/header">
             <Footer />
           </Route>
           <Route path="/">
