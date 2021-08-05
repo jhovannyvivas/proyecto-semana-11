@@ -14,18 +14,7 @@ export default function Homepage() {
 
 
     }
-    const List = GetMeals();
-    const Filter = List.map(plate => plate.strMeal.split('')).map(
-        function Letter(x, index){
-            return [x[0], index]
-        }
-    );
-    const IndexLetter = Filter.filter( item => item[0]=== 'S').map(item => item[1])
 
-    console.log('Filter en acción');
-    console.log(Filter); 
-    console.log('IndexLetter en acción');
-    console.log(IndexLetter); 
 
     return(
         <div className='homepage'>
