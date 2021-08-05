@@ -4,6 +4,7 @@ import getID from './../../utils/getID';
 import { string } from 'yup';
 import { GetMeals } from './../../utils/getMeals';
 import { Lists } from './../../components/Lists/Lists';
+import { Link } from 'react-router-dom';
 
 
 
@@ -32,7 +33,7 @@ export default function MealDetail() {
             <div className='containerImg'><img src={mealDescription[0]?.strMealThumb} alt='meal'></img><h1>{mealDescription[0]?.strMeal}</h1></div>
             <div className='description'>
                 <div className='item'><h3>Drink</h3></div>
-                <div className='text'><p>{mealDescription[0].strDrinkAlternate || "no data" }</p></div>
+                <div className='text'><p>{mealDescription[0]?.strDrinkAlternate || "no data" }</p></div>
                 <div className='item'><h3>Category</h3></div>
                 <div className='text'><p>{mealDescription[0]?.strCategory}</p></div>
                 <div className='item'><h3>Tags</h3></div>
@@ -41,6 +42,10 @@ export default function MealDetail() {
                 <div className='text'><p>{mealDescription[0]?.strInstructions}</p></div>
                 <div className='item'><h3>Youtube</h3></div>
                 <div className='text'><p>{mealDescription[0]?.strYoutube}</p></div>
+                <div className='item'><Link><h3>TABLA</h3></Link></div>
+                <div className='text'><Link><h3>INGREDIENTES</h3></Link></div>
+
+
                 <div className='item'><h3>Inggrendiente 1</h3></div>
                 <div className='text'><p>{mealDescription[0]?.strIngredient1}</p></div>
                 <div className='item'><h3>Ingredient 2</h3></div>

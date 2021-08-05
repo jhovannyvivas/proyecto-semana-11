@@ -18,6 +18,8 @@ import { GetMeals } from './utils/getMeals';
 import { GetMeal } from "./utils/getMeal";
 import MealDetail from './views/meal/mealDetail';
 import { AboutUs } from "./views/aboutUs/AboutUs";
+import { Contact } from './views/contact/Contact';
+import { Register } from './views/register/Register';
 
 function App() {
 
@@ -26,22 +28,38 @@ function App() {
   
 
     <Router>
-       <Header/> 
+       
         <Switch>
+          <Route path="/register">
+          <Header/> 
+            <Register/>
+            <Footer />
+          </Route>
+          <Route path="/contact">
+          <Header/> 
+            <Contact/>
+            <Footer />
+          </Route>
           <Route path="/AboutUs">
+          <Header/> 
             <AboutUs/>
+            <Footer />
           </Route>
           <Route path="/mealDetail/:id">
+          <Header/> 
             <MealDetail/>
+            <Footer />
           </Route>
           <Route path="/homepage">
+          <Header/> 
             <Homepage/>
+            <Footer />
           </Route>
           <Route path="/">
             <Login/>
           </Route>
         </Switch>
-        <Footer />
+
     </Router>
 
 

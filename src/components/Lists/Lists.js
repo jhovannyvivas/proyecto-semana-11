@@ -1,12 +1,13 @@
 
 import List from '../List/List';
 import { getLetters } from './../../utils/getLetters';
+import './Lists.css';
 export const Lists = (mLetter) => {
 
     let Truck = getLetters();
 
     return (
-        <article className='card' id='card'>
+        <article className='gridMeals'>
           {Truck?.map((item) => <List key={item?.idMeal} pId={item} />)}
 
 

@@ -1,0 +1,26 @@
+.contact{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    text-align: center;
+    width: 50vw;
+    margin: auto;
+}
+
+.contact button{
+    width: 10vw;
+    margin: auto;
+}
+
+.contact h3{
+    text-align: left;
+}
+.contact div {
+    padding: 50px;
+}
+
+.message {
+    height: 80px;
+}
+

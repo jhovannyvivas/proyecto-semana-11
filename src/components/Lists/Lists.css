@@ -1,0 +1,11 @@
+.gridMeals {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: cornsilk;
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,20 @@
+.register{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50vw;
+    margin: auto;
+}
+
+.register h1{
+    text-align: center;
+}
+
+.register div{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+
+

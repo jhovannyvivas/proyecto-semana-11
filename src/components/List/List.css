@@ -1,0 +1,34 @@
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    border-radius: 15px;
+    text-decoration-line: none;
+    text-emphasis: none;
+    text-align: center;
+    padding: 50px;
+
+}
+
+.card img {
+    width: 60vh;
+}
+
+.card div h3{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.nameMeal {
+    text-align: center;
+    text-decoration: none;
+    color: blanchedalmond;
+}
+
+.card h3 {
+    text-decoration-line: none;
+}
+
