@@ -1,0 +1,51 @@
+.section{
+    background-color: cornsilk;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.personal{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin: 0px;
+    padding-top: 2vw;
+}
+
+.personal img {
+    width: 50vh;
+    padding: 20px;
+}
+
+.personal h1 {
+    padding: 20px;
+    margin: 0px;
+}
+
+.personal p {
+    width: 400px;
+    text-align: justify;
+}
+
+.mealDb {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin: 0px;
+    padding-top: 2vw;
+}
+
+.mealDb img {
+    width: 50vh;
+    padding: 20px;
+}
+
+.mealDb h1 {
+    padding: 20px;
+    margin: 0px;
+}
+
+.mealDb p {
+    width: 400px;
+    text-align: justify;
+}

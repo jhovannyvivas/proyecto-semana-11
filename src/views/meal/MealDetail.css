@@ -1,4 +1,36 @@
-.homepage {
-    background: rgb(3, 3, 59);
-  
+.mealDetail {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: blanchedalmond;
+}
+
+
+.containerImg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 70px;
+    background-color: cornsilk;
+    color: black;
+    text-align: center;
+}
+
+.containerImg img {
+    width: 100vh;
+    align-self: center ;
+}
+
+.description{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: cornsilk;
+    color: black;
+    text-align: justify;
+    padding: 10px 50px;
+
+}
+
+.item {
+    text-align: center;
 }

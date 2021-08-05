@@ -17,6 +17,7 @@ import Homepage from "./views/homepage/homepage";
 import { GetMeals } from './utils/getMeals';
 import { GetMeal } from "./utils/getMeal";
 import MealDetail from './views/meal/mealDetail';
+import { AboutUs } from "./views/aboutUs/AboutUs";
 
 function App() {
 
@@ -27,6 +28,9 @@ function App() {
     <Router>
        <Header/> 
         <Switch>
+          <Route path="/AboutUs">
+            <AboutUs/>
+          </Route>
           <Route path="/mealDetail/:id">
             <MealDetail/>
           </Route>

@@ -40,9 +40,9 @@ export default function Login () {
       <div className='divContainer'>
          <Container >
           <Form onSubmit={formik.handleSubmit}>
-            <Form.Input type='email' placeholder='Email' name='email' onChange={formik.handleChange} error={formik.errors.email}/>
-            <Form.Input type='password' placeholder='Password' name='password' onChange={formik.handleChange} error={formik.errors.password}/>
-            {Button2()}
+            <Form.Input className='inputFinal' type='email' placeholder='Email' name='email' onChange={formik.handleChange} error={formik.errors.email}/>
+            <Form.Input className='inputFinal' type='password' placeholder='Password' name='password' onChange={formik.handleChange} error={formik.errors.password}/>
+            <div className='ButtonFinal'>{Button2()}</div>
           </Form>
 
         </Container>

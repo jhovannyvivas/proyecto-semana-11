@@ -2,7 +2,7 @@
 import { GetMeals } from './getMeals';
 
 export const getLetters = () => {
-
+    let initialLetter = localStorage.getItem('BaulInput');
     
     let List = GetMeals();
     let Filter = List.map(plate => plate.strMeal.split('')).map(
@@ -10,7 +10,7 @@ export const getLetters = () => {
             return [x[0], index]
         }
     );
-    let indexFinal = Filter.filter( item => item[0]=== 'R').map(item => item[1]).map((item) => List[item]);
+    let indexFinal = Filter.filter( item => item[0]=== initialLetter ).map(item => item[1]).map((item) => List[item]);
    
    
    

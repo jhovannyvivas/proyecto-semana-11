@@ -5,7 +5,7 @@
     width: 50vw;
     height: 40vw;
     padding: 100px 100px;
-    background-color: rgb(98, 16, 16);
+    background-color: rgb(221, 49, 49);
     margin:auto;
 }
 
@@ -21,15 +21,54 @@
     flex-direction: column;
 }
 
+.field {
+    display: flex;
+    justify-content: center;
+
+
+}
+
 .input {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    padding: 10px 10px;
+    height: 80px;
+    width: 300px;
+    align-self: center;
+}
+
+.inputFinal{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 10px 50px;
+}
+
+.inputFinal input {
+    height: 20px;
+    width: 300px;
+}
+
+
+
+.form.button {
+    justify-content: center;
+    display: flex;
+    margin: auto;
 }
 
 .button {
-    width: 50vw;
-    height: 40px;
-    padding: auto;
+    width: 5vw;
+}
+
+.ButtonFinal{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+
+}
+
+.pointing{
+    text-align: center;
 }

@@ -18,7 +18,7 @@ export default function Homepage() {
 
     return(
         <div className='homepage'>
-        <section>
+        <section className='Buscador'>
         <section className="main-input">
         <div className="main-input-container">
             <input type="text" id="entry"/>
@@ -26,10 +26,10 @@ export default function Homepage() {
         </section>
                         <section className="main-buttons">
                         <div className="button-container">
-                                <button onClick={SearchCategory} className="button" id="boton" >Buscar</button>
+                              <Link to={'/mealDetail/' + 10}><button onClick={SearchCategory} className="button" id="boton" >Buscar</button></Link>
             
                         </div>
-        </section>
+                        </section>
         </section>
 
             {console.log(localStorage.getItem('BaulInput'))}
