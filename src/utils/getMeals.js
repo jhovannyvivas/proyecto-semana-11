@@ -13,14 +13,17 @@ export const GetMeals = () => {
     fetch(API, {signal: signal}).then((response) => response.json())
       .then((data1) => {
         setMeals(data1.meals);
+      })
+      .catch(err => {
+        console.log(err);
       });
+
+
 
       return function cleanup() {
           abortController.abort();
       }
   }, []);
-  console.log(mealsA);
-
 
   return mealsA;
 }

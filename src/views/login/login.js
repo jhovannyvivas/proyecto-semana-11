@@ -21,9 +21,6 @@ export default function Login () {
     }
   });
 
-  console.log(formik.values.name);
-  console.log(formik.errors.name);
-  console.log(formik);
 
   function Button2 () {
       let button = "";

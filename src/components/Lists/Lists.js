@@ -1,12 +1,17 @@
 
+import { Redirect } from 'react-router-dom';
 import List from '../List/List';
 import { getLetters } from './../../utils/getLetters';
 import './Lists.css';
 export const Lists = (mLetter) => {
 
     let Truck = getLetters();
+    const Long = {
+      large: Truck.length
+    }
 
-    return (
+    
+    return ( Truck?.length === 0 ? <h1>Loading...</h1> :
         <article className='gridMeals'>
           {Truck?.map((item) => <List key={item?.idMeal} pId={item} />)}
 
@@ -16,6 +21,17 @@ export const Lists = (mLetter) => {
     
 
 }
+
+export const Long = () => {
+
+  let TruckII = getLetters();
+  const Long = {
+    large: TruckII.length
+  }
+  
+  return Long
+}
+
 
 
 // function ListMeals (letter) {

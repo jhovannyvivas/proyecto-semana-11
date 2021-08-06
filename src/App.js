@@ -20,6 +20,7 @@ import MealDetail from './views/meal/mealDetail';
 import { AboutUs } from "./views/aboutUs/AboutUs";
 import { Contact } from './views/contact/Contact';
 import { Register } from './views/register/Register';
+import { Table } from './views/table/table';
 
 function App() {
 
@@ -30,32 +31,37 @@ function App() {
     <Router>
        
         <Switch>
-          <Route path="/register">
+          <Route exact path="/table/:id">
+          <Header/> 
+            <Table/>
+            <Footer />
+          </Route>
+          <Route  exact path="/register">
           <Header/> 
             <Register/>
             <Footer />
           </Route>
-          <Route path="/contact">
+          <Route exact path="/contact">
           <Header/> 
             <Contact/>
             <Footer />
           </Route>
-          <Route path="/AboutUs">
+          <Route exact path="/AboutUs">
           <Header/> 
             <AboutUs/>
             <Footer />
           </Route>
-          <Route path="/mealDetail/:id">
+          <Route exact path="/mealDetail/:id">
           <Header/> 
             <MealDetail/>
             <Footer />
           </Route>
-          <Route path="/homepage">
+          <Route exact path="/homepage">
           <Header/> 
             <Homepage/>
             <Footer />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Login/>
           </Route>
         </Switch>

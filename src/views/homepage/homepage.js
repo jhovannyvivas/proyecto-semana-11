@@ -10,9 +10,6 @@ export default function Homepage() {
     function SearchCategory () {
         let InputHome = document.querySelector("#entry")?.value;
         localStorage.setItem('BaulInput', InputHome);
-        console.log(localStorage.getItem('BaulInput'))
-
-
     }
 
 
@@ -31,8 +28,6 @@ export default function Homepage() {
                         </div>
                         </section>
         </section>
-
-            {console.log(localStorage.getItem('BaulInput'))}
             <Meals/>
         </div>
     )

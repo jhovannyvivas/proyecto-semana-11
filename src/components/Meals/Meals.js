@@ -5,7 +5,7 @@ import Meal from './../Meal/Meal';
 
 export default function Meals(){
     let meals = GetMeals();
-    return(
+    return( meals.length === 0 ? <h1>Loading...</h1> :
         <section className='grillaHome'>
             {meals.map((meal) => <Meal key={meal.idMeal} pId={meal}/> )}
         </section>

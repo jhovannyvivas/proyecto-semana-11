@@ -3,6 +3,7 @@
     justify-content: center;
     flex-direction: column;
     color: blanchedalmond;
+    padding: 5vw;
 }
 
 
@@ -15,9 +16,16 @@
     color: black;
     text-align: center;
 }
+.containerImg div {
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    width: 40vw;
+    margin:auto;
+}
 
-.containerImg img {
-    width: 100vh;
+.containerImg div img {
+    width: 100%;
     align-self: center ;
 }
 
