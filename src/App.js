@@ -21,6 +21,7 @@ import { AboutUs } from "./views/aboutUs/AboutUs";
 import { Contact } from './views/contact/Contact';
 import { Register } from './views/register/Register';
 import { Table } from './views/table/table';
+import MealDetail2 from './views/mealDetail2/mealDetail2';
 
 function App() {
 
@@ -31,6 +32,11 @@ function App() {
     <Router>
        
         <Switch>
+          <Route exact path="/mealSearch">
+          <Header/> 
+            <MealDetail2/>
+            <Footer />
+          </Route>
           <Route exact path="/table/:id">
           <Header/> 
             <Table/>

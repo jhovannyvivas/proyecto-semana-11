@@ -6,7 +6,6 @@ let API = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
 export const GetMeal = (id) => {
   let finalId = id;
 
-  console.log(finalId);
   const [Meal, setMeal] = useState([]);
 
   useEffect(() => {

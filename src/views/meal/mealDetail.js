@@ -3,22 +3,31 @@ import './MealDetail.css';
 import getID from './../../utils/getID';
 import { string } from 'yup';
 import { GetMeals } from './../../utils/getMeals';
-import { Lists, Long } from './../../components/Lists/Lists';
+import { Lists } from './../../components/Lists/Lists';
 import { Link, Redirect, useParams } from 'react-router-dom';
 import { getLetters } from './../../utils/getLetters';
+import { Equal } from './../../utils/Equal';
+import { Search } from '../../components/Search/Search';
 
 
+let Sum = 1;
 
 
 export default function MealDetail() {
     let broswer = window;
     let id = getID(broswer);
     const mealDescription = GetMeal(id);
-    let {large} = Long();
+    let equalNumber = Equal();
+    console.log('equal   ' + equalNumber );
 
+    if(equalNumber === 0) {
+        Sum = Sum + 1;
 
+    }
+
+    console.log('sum =>  ' + Sum)
     
-    
+
    let Path = () => {
         let path = <div></div>;
         if (id === '10') {
@@ -50,12 +59,10 @@ export default function MealDetail() {
             </div>
         </section>
         }
-        if(Long() === 0  ){
 
-        }
         return path;
     }
-    return(<section> <Path/> </section>
+    return(<section><Path/> </section>
         
     )
 }

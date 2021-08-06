@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import List from '../List/List';
 import { getLetters } from './../../utils/getLetters';
 import './Lists.css';
+import getID from './../../utils/getID';
 export const Lists = (mLetter) => {
 
     let Truck = getLetters();
@@ -22,15 +23,6 @@ export const Lists = (mLetter) => {
 
 }
 
-export const Long = () => {
-
-  let TruckII = getLetters();
-  const Long = {
-    large: TruckII.length
-  }
-  
-  return Long
-}
 
 
 
