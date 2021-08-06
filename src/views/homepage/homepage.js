@@ -23,7 +23,7 @@ export default function Homepage() {
         </section>
                         <section className="main-buttons">
                         <div className="button-container">
-                              <Link to={'/mealDetail/' + 10}><button onClick={SearchCategory} className="button" id="boton" >Buscar</button></Link>
+                        <button onClick={SearchCategory} className="button" id="boton" >Buscar</button>
             
                         </div>
                         </section>
