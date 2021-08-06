@@ -1,38 +1,47 @@
 import './Search.css';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useHistory, useLocation, useParams } from 'react-router-dom';
 import { GetMeals } from './../../utils/getMeals';
 import Meal from './../Meal/Meal';
 import { useForm } from './../../utils/useForm';
 import { useState } from 'react';
+import queryString from 'query-string';
+import { useEffect } from 'react';
 
-export const Search = ({history}) => {
+export const Search = () => {
+    const Location = useHistory();
+    const location = useLocation();
+    const {q = ''} = queryString.parse( location.search);
 
     const meals = GetMeals();
 
 const [ formValues, handleInputChange,setValues] = useForm({
-    searchText: ''
+    searchText: q
 })
 const {searchText} = formValues;
 
 
-const handSearch = (e) => {
+const HandSearch = (e) => {
     const Inp = document.getElementById('input');
     e.preventDefault();
     console.log(Inp.value);
     setValues({
         ...formValues,
-        [ Inp.name ]: Inp.value
+        [ Inp.name ]: Inp.value,
     });
+ 
+    Location.push(`?q=${searchText}`);
+    console.log('searchText   ' + searchText )
+    console.log(Location)
 
-    history?.push(`?q=${searchText}`)
 }
+
 
 
 
     return ( 
     <section>
      
-        <form className='Buscador'onSubmit={handSearch} >
+        <form className='Buscador'onSubmit={HandSearch} >
             <section className="main-input">
                 <div className="main-input-container">
                     <input type="text" name="searchText" id='input'/>
